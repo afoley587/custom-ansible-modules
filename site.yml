@@ -1,0 +1,31 @@
+- name: Testing our custom module
+  hosts: localhost
+  gather_facts: true
+
+  tasks:
+    - name: Use Our Custom Module To Calculate The Area Of A Circle
+      area_of_circle: 
+        radius: 10
+      register: area_of_circle_result
+    
+    - name: Show area of circle
+      debug:
+        msg: 
+          - "The are of the circle is {{ area_of_circle_result.area }}!"
+
+    - name: Use Our Other Custom Module To Ping Some Websites
+      ping_test: 
+        sites:
+          - https://google.com
+          - https://youtube.com
+          - https://ebay.com
+      register: ping_test_result
+
+    - name: Show Ping Test Results
+      debug:
+        msg: 
+          - "{{ item.status }}"
+      with_items: "{{ ping_test_result.status }}"
+      loop_control:
+        label: "{{ item.site }}"
+
