@@ -1,5 +1,7 @@
 # 1 Dollar DevOps: Writing Custom Ansible Modules With Python
 
+![Thumbnail](./images/thumbnail.png)
+
 Ansible is a powerful open-source automation tool that simplifies complex 
 IT tasks, enabling users to define and manage infrastructure as code. 
 Developed by Red Hat, Ansible is widely utilized for configuration management, 
@@ -30,7 +32,7 @@ You'll notice similar structures and patterns in both modules that will expand t
 any other module you find yourself needing to make.
 
 If you plan on following along with this blog post, please install
-the requirements into your venv. They can be found [here]().
+the requirements into your venv. They can be found [here](https://github.com/afoley587/custom-ansible-modules/blob/main/requirements.txt).
 
 If you've used ansible before, you'll be aware that it has a custom directory
 structure where it looks for specific items like variables, hosts, roles, etc.
@@ -369,4 +371,4 @@ localhost                  : ok=5    changed=2    unreachable=0    failed=0    s
 
 # References
 * [Developing Ansible Modules](https://docs.ansible.com/ansible/latest/dev_guide/developing_modules_general.html)
-* [My GitHub Repo]()
+* [My GitHub Repo](https://github.com/afoley587/custom-ansible-modules)
